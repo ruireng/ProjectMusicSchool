@@ -25,16 +25,27 @@ CREATE VIEW individual_monthwise
   GROUP BY mon, Lyear
   ORDER BY mon;
 
+--lessons held on the same year and month will have both years and months concatenaded 'YYYYYYYY', 'MMMM' will be fixed later hopefully
+CREATE VIEW lessons_my
+ AS
+ SELECT ensembles_monthwise.ensemblel,
+    group_monthwise.groupl,
+    individual_monthwise.individuall,
+    concat(group_monthwise.mon, individual_monthwise.mon, ensembles_monthwise.mon) AS mon,
+    concat(group_monthwise.lyear, individual_monthwise.lyear, ensembles_monthwise.lyear) AS lyear
+   FROM ensembles_monthwise
+     FULL JOIN group_monthwise ON ensembles_monthwise.mon = group_monthwise.mon AND ensembles_monthwise.lyear = group_monthwise.lyear
+     FULL JOIN individual_monthwise ON group_monthwise.mon = individual_monthwise.mon AND individual_monthwise.lyear = group_monthwise.lyear;
 
-
-
-SELECT individualL, groupL, ensembleL, 
-SUM(coalesce(individualL,0) + coalesce(groupL,0) + coalesce(ensembleL,0))
-, ensembles_monthwise.mon 
-FROM ensembles_monthwise
-FULL JOIN group_monthwise
-ON ensembles_monthwise.mon = group_monthwise.mon
-FULL JOIN individual_monthwise 
-ON ensembles_monthwise.mon = individual_monthwise.mon
-GROUP BY individualL, groupL, ensembleL, ensembles_monthwise.mon
-ORDER BY ensembles_monthwise.mon ASC;
+--all lessons+ total year 2023
+SELECT 
+coalesce(individualL,0) AS individualL,
+coalesce(groupL, 0) AS groupL, 
+coalesce(ensembleL, 0) AS ensembleL, 
+SUM(coalesce(individualL,0) + coalesce(groupL,0) + coalesce(ensembleL,0)) AS total
+, mon 
+FROM lessons_my
+--WHERE COLUMN be modified when needed
+WHERE lyear= '2023'
+GROUP BY individualL, groupL, ensembleL, mon
+ORDER BY cast(mon AS int) ASC;
