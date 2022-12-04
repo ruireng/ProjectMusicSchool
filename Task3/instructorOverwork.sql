@@ -1,5 +1,5 @@
 --view for number of individuallessons per instructor at current date
-CREATE VIEW public.ind_instructor
+CREATE VIEW ind_instructor
  AS
  SELECT individual.instructor_id,
     count(individual.instructor_id) AS noflessons,
@@ -9,7 +9,7 @@ CREATE VIEW public.ind_instructor
   GROUP BY individual.instructor_id, (EXTRACT(month FROM individual.start_time));
 
 --view for number of grouplessons per instructor at current date
-CREATE VIEW public.gro_instructor
+CREATE VIEW gro_instructor
  AS
  SELECT gro.instructor_id,
     count(gro.instructor_id) AS noflessons,
