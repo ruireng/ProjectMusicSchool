@@ -151,7 +151,8 @@ VALUES
   (1,2),
   (2,3),
   (1,3),
-  (29,30);
+  (29,30),
+  (28,27);
 
 INSERT INTO room (room_number)
 VALUES
