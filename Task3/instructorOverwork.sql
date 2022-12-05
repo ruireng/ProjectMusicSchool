@@ -19,7 +19,7 @@ CREATE VIEW gro_instructor
   GROUP BY gro.instructor_id, (EXTRACT(month FROM gro.start_time));
 
 
---view for number of ensembles per instructor at current date
+--view for number of ensembles per instructor at current date.
 CREATE VIEW ens_instructor
  AS
  SELECT ensemble.instructor_id,
