@@ -327,6 +327,36 @@ VALUES
   (7,2),
   (7,7),
   (7,23);
+  -- newly added lessons
+  (8,25),
+  (8,9),
+  (8,14),
+  (8,30),
+  (8,3),
+  (8,11),
+  (9,13),
+  (9,9),
+  (9,1),
+  (9,18),
+  (9,21),
+  (9,14),
+  (9,24),
+  (10,25),
+  (11,3),
+  (11,28),
+  (11,29),
+  (11,5),
+  (11,17),
+  (12,18),
+  (12,10),
+  (12,24),
+  (12,23),
+  (12,29),
+  (12,21),
+  (13,21),
+  (13,27),
+  (13,28),
+  (13,31);
   
 INSERT INTO gro (instructor_id,skill_level_id,instrument_type_id,room_id,pricing_id,start_time,end_time,max_no_of_students,min_no_of_students)
 VALUES
