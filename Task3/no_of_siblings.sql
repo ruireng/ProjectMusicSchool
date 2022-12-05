@@ -36,17 +36,19 @@ CREATE VIEW number_of_siblings AS
     LEFT JOIN student AS st
     ON si.student_id = st.student_id OR si.sibling_student_id = st.student_id
     GROUP BY st.student_id, first_name, last_name, ssn;
+    
+-- all students with number of siblings (including 0)
+CREATE VIEW all_number_of_siblings AS
+    SELECT concat(si.first_name) || concat(st.first_name) AS first_name, concat(si.last_name) || concat(st.last_name) AS last_name,
+    concat(st.student_id) || concat(si.student_id) AS student_id, COALESCE(no_of_siblings, 0) AS no_of_siblings
+    FROM number_of_siblings AS si
+    FULL JOIN students_without_siblings AS st
+    ON si.first_name = st.first_name AND si.last_name = st.last_name;
 
 -- query 2:
 -- show how many students there are with no sibling, with one sibling, with
 -- two siblings, etc.
 
--- query for no siblings
-SELECT COUNT(*)
-FROM students_without_siblings;
-
--- query for with n number of siblings
-SELECT COUNT(*)
-FROM number_of_siblings
--- enter 1 or 2 below, currently 1
-WHERE no_of_siblings = 1;
+SELECT COUNT(no_of_siblings), no_of_siblings
+FROM all_number_of_siblings
+GROUP BY no_of_siblings;
