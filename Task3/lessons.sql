@@ -25,7 +25,7 @@ CREATE VIEW individual_monthwise
   GROUP BY mon, Lyear
   ORDER BY mon;
 
---lessons held on the same year and month will have both years and months concatenaded 'YYYYYYYY', 'MMMM' will be fixed later hopefully
+--lessons held on the same year and month will have both years and months concatenaded 'YYYYYYYY', 'MMMM' will be fixed later hopefully.
 CREATE VIEW lessons_my
  AS
  SELECT ensembles_monthwise.ensemblel,
