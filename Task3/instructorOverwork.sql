@@ -30,8 +30,8 @@ CREATE VIEW ens_instructor
   GROUP BY ensemble.instructor_id, (EXTRACT(month FROM ensemble.start_time));
 
 
---Query that returns total number of lessons per instructor at currentdate
-SELECT ind_instructor.instructor_id, sum(coalesce(ind_instructor.noflessons,0)
+--view for total number of lessons per instructor at current date
+CREATE VIEW overwork AS SELECT ind_instructor.instructor_id, sum(coalesce(ind_instructor.noflessons,0)
 	+ coalesce(gro_instructor.noflessons,0)
 	+ coalesce(ens_instructor.noflessons, 0))  
 FROM ind_instructor 
@@ -40,3 +40,6 @@ ON ind_instructor.instructor_id = ens_instructor.instructor_id
 FULL JOIN gro_instructor 
 ON ind_instructor.instructor_id= gro_instructor.instructor_id
 GROUP BY ind_instructor.instructor_id;
+
+--Query returns total number of lessons per instructor with more than 5 lessons
+SELECT * FROM overwork WHERE overwork.sum >5
