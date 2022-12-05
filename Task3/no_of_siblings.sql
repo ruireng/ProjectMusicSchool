@@ -49,6 +49,7 @@ CREATE VIEW all_number_of_siblings AS
 -- show how many students there are with no sibling, with one sibling, with
 -- two siblings, etc.
 
+-- this query shows all info needed
 SELECT COUNT(no_of_siblings), no_of_siblings
 FROM all_number_of_siblings
 GROUP BY no_of_siblings;
