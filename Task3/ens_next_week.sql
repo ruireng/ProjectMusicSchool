@@ -42,3 +42,6 @@ CREATE VIEW next_week_ens_info AS
 -- list all ensembles held during next week, sorted by music genre and weekday
 -- for each ensemble tell whether it's fully booked, has 1-2 seats left or has more seats left
 
+-- the query
+SELECT *
+FROM next_week_ens_info;
