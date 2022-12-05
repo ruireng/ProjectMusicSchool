@@ -37,7 +37,7 @@ CREATE VIEW lessons_my
      FULL JOIN group_monthwise ON ensembles_monthwise.mon = group_monthwise.mon AND ensembles_monthwise.lyear = group_monthwise.lyear
      FULL JOIN individual_monthwise ON group_monthwise.mon = individual_monthwise.mon AND individual_monthwise.lyear = group_monthwise.lyear;
 
---all lessons+ total year 2023
+--all lessons+ total year 2022
 SELECT 
 coalesce(individualL,0) AS individualL,
 coalesce(groupL, 0) AS groupL, 
@@ -46,6 +46,6 @@ SUM(coalesce(individualL,0) + coalesce(groupL,0) + coalesce(ensembleL,0)) AS tot
 , mon 
 FROM lessons_my
 --WHERE COLUMN be modified when needed
-WHERE lyear= '2023'
+WHERE lyear LIKE '%2022'
 GROUP BY individualL, groupL, ensembleL, mon
 ORDER BY cast(mon AS int) ASC;
