@@ -6,7 +6,7 @@ and will be updated during the course of the project. This repository is made as
 This is a project made during the course IV1351 Data Storage Paradigms, where a fully functioning and queryable database was created.  
 The project consists of
  - task 1: creating a conceptual model.
- - task 2: converting the conceptual model into a logical model, and then the logical into a SQL database creation script.
+ - task 2: converting the conceptual model into a logical model, and then the logical model into a SQL database creation script.
  - task 3: creating SQL scripts that can handle certain queries.
 
 ## Want to try and query our database?
@@ -21,7 +21,7 @@ The project consists of
  9. You can now test the database with the remaining .sql query scripts.
 
 ## About the project:
-This project was made during the fall term of 2022.
+This project was made during the fall term of 2022.  
 The models (task 1 & 2) were made in Astah while the database was created in PostgreSQL.  
 This repository was mainly used as a way for the teachers of the course to grade the course project.
 
