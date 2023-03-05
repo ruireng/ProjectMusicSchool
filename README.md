@@ -15,8 +15,15 @@ The project consists of
  3. Navigate to PostgreSQL's `scripts` folder. If the installation location was not changed, the folder can be found at `C:\Program Files\PostgreSQL\15\scripts` (Windows)
  4. Insert the .sql scripts into `scripts`.
  5. Open PostgreSQL's SQL Shell.
- 6. ...
+ 6. Create the database with the `create_sgdb.sql` script.
+ 7. Activate detection for UTF8 encoding with `\encoding UTF8`.
+ 8. Insert all the data with the `insert_sgdb.sql` script.
+ 9. You can now test the database with the remaining .sql query scripts.
 
+## About the project:
+The models (task 1 & 2) were made in Astah while the database was created in PostgreSQL.  
+This repository was mainly used as a way for the teachers of the course to grade the course project.
 
-
-This project was made by Roy L. and Mostafa A. Z. 
+## This project was collaborative effort between:
+[Roy L.](https://github.com/ruisnake)  
+[Mostafa A. Z.](https://github.com/MrFlamadak)
