@@ -25,6 +25,6 @@ This project was made during the fall term of 2022.
 The models (task 1 & 2) were made in Astah while the database was created in PostgreSQL.  
 This repository was mainly used as a way for the teachers of the course to grade the course project.
 
-## This project was collaborative effort between:
+## This project was a collaborative effort between:
 [Roy L.](https://github.com/ruisnake)  
 [Mostafa A. Z.](https://github.com/MrFlamadak)
