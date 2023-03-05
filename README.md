@@ -1,6 +1,22 @@
 # IV1351 Data Storage Paradigms - Project: Soundgood Music School
 
-This is a repository for a project in the course IV1351 Data Storage Paradigms fall term 2022. The repository should contain all tasks for the project
-and will be updated during the course of the project. This repository is made as a direct way for the teachers of the course to reach the source code/project. 
+<!-- This is a repository for a project in the course IV1351 Data Storage Paradigms fall term 2022. The repository should contain all tasks for the project
+and will be updated during the course of the project. This repository is made as a direct way for the teachers of the course to reach the source code/project. -->
+
+This is a project made during the course IV1351 Data Storage Paradigms, where a fully functioning and queryable database was created.  
+The project consists of
+ - task 1: creating a conceptual model.
+ - task 2: converting the conceptual model into a logical model, and then the logical into a SQL database creation script.
+ - task 3: creating SQL scripts that can handle certain queries.
+
+## Want to try and query our database?
+ 1. Have PostgreSQL installed.
+ 2. Download all of the .sql scripts from the `Task3` folder.
+ 3. Navigate to PostgreSQL's `scripts` folder. If the installation location was not changed, the folder can be found at `C:\Program Files\PostgreSQL\15\scripts` (Windows)
+ 4. Insert the .sql scripts into `scripts`.
+ 5. Open PostgreSQL's SQL Shell.
+ 6. ...
+
+
 
 This project was made by Roy L. and Mostafa A. Z. 
