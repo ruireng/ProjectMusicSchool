@@ -12,7 +12,7 @@ The project consists of
 ## Want to try and query our database?
  1. Have PostgreSQL installed.
  2. Download all of the .sql scripts from the `Task3` folder.
- 3. Navigate to PostgreSQL's `scripts` folder. If the installation location was not changed, the folder can be found at `C:\Program Files\PostgreSQL\15\scripts` (Windows)
+ 3. Navigate to PostgreSQL's `scripts` folder. If the installation location was not changed, the folder can be found at `C:\Program Files\PostgreSQL\15\scripts` (Windows).
  4. Insert the .sql scripts into `scripts`.
  5. Open PostgreSQL's SQL Shell.
  6. Create the database with the `create_sgdb.sql` script.
