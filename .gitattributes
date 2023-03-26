@@ -1,0 +1,4 @@
+# make .sql files detectible as SQL language
+
+*.sql linguist-detectable=true
+*.sql linguist-language=sql
