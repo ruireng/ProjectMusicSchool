@@ -1,4 +1,9 @@
-# make .sql files detectible as SQL language
+# make .sql files detectable as SQL language
 
 *.sql linguist-detectable=true
 *.sql linguist-language=sql
+
+# make .md files detectable as Mardown language
+
+*.md linguist-detectable=true
+*.md linguist-documentation=false
