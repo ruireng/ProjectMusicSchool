@@ -1,4 +1,4 @@
-# IV1351 Data Storage Paradigms - Project: Soundgood Music School
+# Soundgood Music School Database
 
 <!-- This is a repository for a project in the course IV1351 Data Storage Paradigms fall term 2022. The repository should contain all tasks for the project
 and will be updated during the course of the project. This repository is made as a direct way for the teachers of the course to reach the source code/project. -->
@@ -21,6 +21,7 @@ The project consists of
  9. You can now test the database with the remaining .sql query scripts.
 
 ## About the project:
+Made during the course IV1351 Data Storage Paradigms.  
 This project was made during the fall term of 2022.  
 The models (task 1 & 2) were made in Astah while the database was created in PostgreSQL.  
 This repository was mainly used as a way for the teachers of the course to grade the course project.
